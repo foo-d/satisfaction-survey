@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>foo(d) Satisfaction survey</title>
+</head>
+<body>
+<div class="title">
+    <h1>foo(d)</h1>
+</div>
+<div id="home">
+    <h2>Satisfaction survey</h2>
+    <div id="cookie"></div>
+    <div id="page">
+        <label>
+            <input id="lastName" placeholder="Last name" type="text">
+            <input id="firstName" placeholder="First name" type="text">
+            <input id="age" placeholder="Age" type="number">
+            <input id="email" placeholder="Email" type="email">
+            <input id="phoneNumber" placeholder="Phone number" type="number">
+            <input id="company" placeholder="Name of your company" type="text">
+            <input id="yearsOfSeniority" placeholder="Years of seniority in your company" type="number">
+        </label>
+        <a class="next" data-index="1" href="javascript:void(0);">Start survey</a>
+    </div>
+</div>
+<script src="controller/index.js" type="module"></script>
+<script src="dist/jquery.min.js"></script>
+</body>
+</html>

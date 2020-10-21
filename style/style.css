@@ -1,0 +1,45 @@
+#home {
+    align-items: center;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 33% 0 33%;
+    width: 33%;
+}
+
+#home label {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    background-color: #f7230c;
+    color: #ffffff;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+}
+
+.title h1 {
+    font-family: "Baguette", serif;
+    font-size: xxx-large;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Baguette";
+    src: url("../font/Baguette.ttf");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "JetBrains Mono";
+    src: url("../font/JetBrainsMono-Regular.woff2");
+}
+
+body {
+    background-color: #db1702;
+    font-family: "JetBrains Mono", serif;
+    margin: 0;
+}
