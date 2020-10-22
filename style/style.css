@@ -13,6 +13,10 @@
     flex-direction: column;
 }
 
+.next {
+    visibility: hidden;
+}
+
 .title {
     background-color: #f7230c;
     color: #ffffff;

@@ -1,7 +1,9 @@
 /* global $ */
+document.getElementById('next1').style.visibility = 'visible';
 $('.next').on('click', function () {
   switch ($(this).data('index')) {
     case 1:
+      document.getElementById('next2').style.visibility = 'visible';
       document.cookie = 'lastName=' + document.getElementById('lastName')
         .value + ';';
       document.cookie = 'firstName=' + document.getElementById('firstName')
@@ -16,6 +18,15 @@ $('.next').on('click', function () {
     case 3:
       break;
     case 4:
+      break;
+    case 5:
+      const ELEMENT = document.createElement('a');
+      const CSV = 'data:text/csv;charset=utf-8,' + document.cookie.split('; ')
+        .map(element => element.split('=')[1]).join(',') + '\n';
+      ELEMENT.setAttribute('download', 'satisfaction-survey.csv');
+      ELEMENT.setAttribute('href', encodeURI(CSV));
+      document.body.appendChild(ELEMENT);
+      ELEMENT.click();
       break;
     default:
       break;
