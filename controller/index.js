@@ -1,9 +1,11 @@
+import { next } from '../model/next.js';
+
+next('next1');
 /* global $ */
-document.getElementById('next1').style.visibility = 'visible';
 $('.next').on('click', function () {
   switch ($(this).data('index')) {
     case 1:
-      document.getElementById('next2').style.visibility = 'visible';
+      next('next2');
       document.cookie = 'lastName=' + document.getElementById('lastName')
         .value + ';';
       document.cookie = 'firstName=' + document.getElementById('firstName')
@@ -14,10 +16,13 @@ $('.next').on('click', function () {
         '.');
       break;
     case 2:
+      next('next3');
       break;
     case 3:
+      next('next4');
       break;
     case 4:
+      next('next5');
       break;
     case 5:
       const ELEMENT = document.createElement('a');

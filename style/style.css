@@ -1,6 +1,7 @@
 #home {
     align-items: center;
-    background-color: #000000;
+    border: #f7230c solid 5px; /* Rouge anglais */
+    border-radius: 9px;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -14,15 +15,21 @@
 }
 
 .next {
-    visibility: hidden;
+    border: #f7230c solid 5px; /* Rouge anglais */
+    border-radius: 9px;
+    display: none;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
 }
 
 .title {
-    background-color: #f7230c;
+    background-color: #f7230c; /* Rouge anglais */
+    border-radius: 0 0 99px 99px;
     color: #ffffff;
-    margin: 0;
     padding: 15px;
     text-align: center;
+    text-shadow: #000000 1px 1px;
 }
 
 .title h1 {
@@ -36,14 +43,16 @@
     src: url("../font/Baguette.ttf");
 }
 
-@font-face {
-    font-display: swap;
-    font-family: "JetBrains Mono";
-    src: url("../font/JetBrainsMono-Regular.woff2");
+a:hover {
+    background-color: #f7230c; /* Rouge anglais */
+}
+
+a:link, a:visited {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 body {
-    background-color: #db1702;
-    font-family: "JetBrains Mono", serif;
+    background-color: #db1702; /* Rouge sinabre */
     margin: 0;
 }
