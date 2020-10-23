@@ -1,8 +1,6 @@
 #home {
     align-items: center;
-    border: #f7230c solid 5px; /* Rouge anglais */
-    border-radius: 9px;
-    color: #ffffff;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     margin: 15px 33% 0 33%;
@@ -15,8 +13,6 @@
 }
 
 .next {
-    border: #f7230c solid 5px; /* Rouge anglais */
-    border-radius: 9px;
     display: none;
     margin: 15px;
     padding: 15px;
@@ -44,15 +40,19 @@
 }
 
 a:hover {
-    background-color: #f7230c; /* Rouge anglais */
 }
 
 a:link, a:visited {
-    color: #ffffff;
     text-decoration: none;
 }
 
 body {
-    background-color: #db1702; /* Rouge sinabre */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("../img/87796715_3036581163040904_8469289707979669504_o.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
+}
+
+html {
+    height: 100%;
 }
