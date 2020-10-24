@@ -5,9 +5,9 @@
     width: 100%;
 }
 
-#photo {
+#img1 {
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .25)),
-    url("../img/87796715_3036581163040904_8469289707979669504_o.jpg");
+    url("../img/img1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,14 +18,23 @@
     width: 100%;
 }
 
-#color {
+#img2 {
     background-image: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),
-    url("../img/975.png");
+    url("../img/img2.png");
     background-size: contain;
     height: 60%;
     bottom: 0;
     position: absolute;
     width: 100%;
+}
+
+.title {
+    color: #ffffff;
+    font-family: "Baguette", serif;
+    font-size: xxx-large;
+    position: absolute;
+    text-align: center;
+    top: 15px;
 }
 
 #home {
@@ -48,7 +57,7 @@
 }
 
 #home input {
-    border: 1px solid black;
+    border: #000000 1px solid;
     border-radius: 5px;
     margin: 15px;
     padding: 15px;
@@ -61,15 +70,6 @@
     text-align: center;
 }
 
-.title {
-    color: #ffffff;
-    font-family: "Baguette", serif;
-    font-size: xxx-large;
-    position: absolute;
-    text-align: center;
-    top: 15px;
-}
-
 @font-face {
     font-display: swap;
     font-family: "Baguette";
@@ -79,7 +79,7 @@
 @font-face {
     font-display: swap;
     font-family: "Open Sans";
-    src: url("../font/OpenSans-regular.ttf");
+    src: url("../font/OpenSans-Regular.ttf");
 }
 
 a:link, a:visited {
