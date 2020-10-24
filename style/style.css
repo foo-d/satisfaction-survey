@@ -1,15 +1,57 @@
+#background {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#photo {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .25)),
+    url("../img/87796715_3036581163040904_8469289707979669504_o.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#color {
+    background-image: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),
+    url("../img/975.png");
+    background-size: contain;
+    height: 60%;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
 #home {
     align-items: center;
     background: #ffffff;
+    border: rgba(0, 0, 0, .12) 1px solid;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
-    margin: 15px 33% 0 33%;
-    width: 33%;
+    max-width: 768px;
+    padding: 15px 0 15px 0;
+    position: absolute;
+    top: 30%;
+    width: 100%;
 }
 
 #home label {
     display: flex;
     flex-direction: column;
+}
+
+#home input {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
 }
 
 .next {
@@ -20,17 +62,12 @@
 }
 
 .title {
-    background-color: #f7230c; /* Rouge anglais */
-    border-radius: 0 0 99px 99px;
     color: #ffffff;
-    padding: 15px;
-    text-align: center;
-    text-shadow: #000000 1px 1px;
-}
-
-.title h1 {
     font-family: "Baguette", serif;
     font-size: xxx-large;
+    position: absolute;
+    text-align: center;
+    top: 15px;
 }
 
 @font-face {
@@ -39,7 +76,10 @@
     src: url("../font/Baguette.ttf");
 }
 
-a:hover {
+@font-face {
+    font-display: swap;
+    font-family: "Open Sans";
+    src: url("../font/OpenSans-regular.ttf");
 }
 
 a:link, a:visited {
@@ -47,12 +87,9 @@ a:link, a:visited {
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("../img/87796715_3036581163040904_8469289707979669504_o.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-}
-
-html {
+    display: flex;
+    font-family: "Open Sans", serif;
     height: 100%;
+    justify-content: center;
+    margin: 0;
 }
