@@ -1,6 +1,7 @@
 import { next } from '../model/next.js';
 
 next('next1');
+let yearsOfSenority, question456;
 /* global $ */
 $('.next').on('click', function () {
   switch ($(this).data('index')) {
@@ -14,12 +15,16 @@ $('.next').on('click', function () {
         .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
         .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
         '.');
+      yearsOfSenority = document.getElementById('yearsOfSeniority').value;
       break;
     case 2:
       next('next3');
       break;
     case 3:
       next('next4');
+      question456.push(document.getElementById('question4').value, document
+        .getElementById('question5').value, document.getElementById('question6')
+        .value);
       break;
     case 4:
       next('next5');
@@ -36,8 +41,19 @@ $('.next').on('click', function () {
     default:
       break;
   }
-  $.get('view/questions-' + $(this).data('index') + '.html', element =>
-    $('#page').html(element));
+  $.get('view/questions-' + $(this).data('index') + '.html', element => {
+    $('#page').html(element);
+    if ($(this).data('index') === 2) {
+      $('#question4').on('input', _ => $('#number').text(document
+        .getElementById('question4').value));
+      $('.radio').on('click', function () {
+        const RADIO = document.getElementsByClassName('radio');
+        for (let i = 0; i < RADIO.length; i++) RADIO[i].style.borderColor =
+          'transparent';
+        document.getElementById($(this)[0].id).style.borderColor = '#000000';
+      });
+    }
+  });
   const PAGE_NUMBER = $('#pageNumber');
   PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5');
 });

@@ -56,22 +56,30 @@
 }
 
 #page {
-    width: 100%;
-}
-
-#page label {
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+#page > div {
+    margin: 15px;
+    width: 50%;
 }
 
-#page input {
+.textNumber {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.textNumber input {
     border: #000000 1px solid;
     border-radius: 5px;
     margin: 15px;
     padding: 15px;
     text-align: center;
-    width: 33%;
+    width: 100%;
 }
 
 .next {
@@ -81,8 +89,26 @@
     text-align: center;
 }
 
-.select, .radio {
+.select {
     display: flex;
+    justify-content: flex-start;
+}
+
+.textArea {
+    width: 100%;
+}
+
+.range {
+    display: flex;
+}
+
+.radio {
+    border: transparent 1px solid;
+    padding: 15px;
+}
+
+.radios {
+    margin: 15px 0 0 0;
 }
 
 @font-face {
