@@ -38,4 +38,6 @@ $('.next').on('click', function () {
   }
   $.get('view/questions-' + $(this).data('index') + '.html', element =>
     $('#page').html(element));
+  const PAGE_NUMBER = $('#pageNumber');
+  PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5');
 });

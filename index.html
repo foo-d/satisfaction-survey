@@ -10,28 +10,34 @@
     <div id="img1"></div>
     <div id="img2"></div>
 </div>
-<div class="title">
-    <h1>foo(d)</h1>
-</div>
-<div id="home">
-    <h1>Satisfaction survey</h1>
-    <div id="cookie"></div>
-    <div id="page">
-        <label>
-            <input id="lastName" placeholder="Last name" type="text">
-            <input id="firstName" placeholder="First name" type="text">
-            <input id="age" placeholder="Age" type="number">
-            <input id="email" placeholder="Email" type="email">
-            <input id="phoneNumber" placeholder="Phone number" type="number">
-            <input id="company" placeholder="Name of your company" type="text">
-            <input id="yearsOfSeniority" placeholder="Years of seniority in your company" type="number">
-        </label>
+<div id="foreground">
+    <div id="title">
+        <h1>foo(d)</h1>
     </div>
-    <a class="next" data-index="1" href="javascript:void(0);" id="next1">Start survey</a>
-    <a class="next" data-index="2" href="javascript:void(0);" id="next2">Next questions</a>
-    <a class="next" data-index="3" href="javascript:void(0);" id="next3">Next questions</a>
-    <a class="next" data-index="4" href="javascript:void(0);" id="next4">End survey</a>
-    <a class="next" data-index="5" href="javascript:void(0);" id="next5">Download survey</a>
+    <div id="home">
+        <h2>Satisfaction survey</h2>
+        <h3 id="cookie">Thank you for taking the time to answer this questionnaire.</h3>
+        <div id="page">
+            <label>
+                <input id="lastName" placeholder="Last name" type="text">
+                <input id="firstName" placeholder="First name" type="text">
+                <input id="age" placeholder="Age" type="number">
+                <input id="email" placeholder="Email" type="email">
+                <input id="phoneNumber" placeholder="Phone number" type="number">
+                <input id="company" placeholder="Name of your company" type="text">
+                <input id="yearsOfSeniority" placeholder="Years of seniority in your company" type="number">
+            </label>
+        </div>
+        <a class="next" data-index="1" href="javascript:void(0);" id="next1">Start survey</a>
+        <a class="next" data-index="2" href="javascript:void(0);" id="next2">Next questions</a>
+        <a class="next" data-index="3" href="javascript:void(0);" id="next3">Next questions</a>
+        <a class="next" data-index="4" href="javascript:void(0);" id="next4">End survey</a>
+        <a class="next" data-index="5" href="javascript:void(0);" id="next5">Download survey</a>
+        <div id="pageNumber">1/5</div>
+    </div>
+    <div>
+        <h1>&nbsp</h1>
+    </div>
 </div>
 <script src="controller/index.js" type="module"></script>
 <script src="dist/jquery.min.js"></script>
