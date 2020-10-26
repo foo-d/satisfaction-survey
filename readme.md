@@ -25,6 +25,7 @@ Email :
   * [Contraintes techniques](#contraintes-techniques)
   * [Les livrables](#les-livrables)
   * [Le planning](#le-planning)
+* Auteurs
 ## Présentation de l'entreprise
 foo(d) est le mix parfait entre un fast food et un vrai restaurant, mêlant la rapidité avec de la bonne nourriture, installé dans le XVe arrondissement de Paris. foo(d) compte une vingtaine de salarié et sert plus d’une cinquantaine de couvert par service.
 
@@ -52,7 +53,7 @@ En résumé, foo(d) souhaite se moderniser et se professionnaliser afin de ne pl
 ### Les objectifs du site
 Le site internet a pour objectif d’améliorer la visibilité de l’entreprise. En effet, avoir une présence sur ce média est indispensable à la réussite du restaurant. Il va donc présenter l’enseigne ainsi que les services proposés par cette dernière.
 
-L'objectif est d'obtenir un retour de la part des consommateurs afin d'améliorer les préstation de foo(d).
+L'objectif est d'obtenir un retour de la part des consommateurs afin d'améliorer les préstations de foo(d).
 ### Les cibles
 Nous visons un public professionel de tout âge pour la consommation sur place. Toutefois, le public visé par le site internet est plus jeune. Il est relatif aux tranches d’âges qui consomment le plus ce média.
 ### Les objectifs quantitatifs
@@ -71,6 +72,16 @@ Le site aura une version mobile afin d’être adapté à l’utilisation sur t�
 Le logo du site est celui de l'entreprise foo(d).
 
 ![Logo](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo.png)
+
+Les couleurs qui vont être utilisées pour l'application web sont :
+* Blanc : #ffffff
+* Noir : #000000
+
+Les polices à utiliser sont :
+* Baguette Font : pour le nom de l'entreprise
+* Open Sans : pour les textes
+
+Aucun élémént n'est à conserver puisque le site internet va être créé dans sa globalité. 
 ### Wireframe et maquettage
 ## Spécificités et livrables
 ### Le contenu du site
@@ -88,3 +99,6 @@ Il faudra également assurer sa maintenance.
 * Date de la création et validation du site : du 02/11/2020 au 09/11/2020
 * Date des tests : du 10/11/2020 au 16/11/2020
 * Date de mise en ligne : 17/11/2020
+## Auteurs
+### [Alexy Nicolau](https://github.com/C9Kaiser)
+### [Tanguy Sanquirgo](https://github.com/knouy)
