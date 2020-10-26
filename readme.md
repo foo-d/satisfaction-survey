@@ -86,8 +86,9 @@ Sa version en noir et blanc.
 ![logo2](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo2.png)
 
 #### Typographie
-
-![typography1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/typography1.png)
+<kbd>
+<img alt="typography1" src="https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/typography1.png">
+</kbd>
 
 #### Animations
 #### Couleurs
