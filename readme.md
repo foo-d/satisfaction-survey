@@ -54,6 +54,7 @@ Afin de se développer, foo(d) souhaiterais mettre en place différents services
 * Un outil de gestion de congé des employés
 * Un site de proposition de recette
 * Un forum de discussions
+* Une enquête de satisfaction en ligne pour avoir l'avis des clients
 
 En résumé, foo(d) souhaite se moderniser et se professionnaliser afin de ne plus dépendre des prises de notes papiers.
 ### Les objectifs du site
@@ -85,6 +86,9 @@ Sa version en noir et blanc.
 ![logo2](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo2.png)
 
 #### Typographie
+
+![typography1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/typography1.png)
+
 #### Animations
 #### Couleurs
 Les couleurs qui vont être utilisées pour l'application web sont :
