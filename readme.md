@@ -86,7 +86,10 @@ Les couleurs qui vont être utilisées pour l'application web sont :
 Les photos pouvant être utilisées sont celles du restaurant comme :
 
 ![img1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img1.jpg)
-<img src="https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img2.jpg" style="width: 50%">
+<div style="display: flex; justify-content: space-between">
+<img alt="img2" src="https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img2.jpg" style="width: 48%">
+<img alt="img3" src="https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img3.jpg" style="width: 48%">
+</div>
 
 #### Polices
 Les polices à utiliser sont :
