@@ -80,8 +80,14 @@ Le logo du site est celui de l'entreprise foo(d).
 
 #### Couleurs
 Les couleurs qui vont être utilisées pour l'application web sont :
-* Blanc : #ffffff
-* Noir : #000000
+##### Blanc
+
+![color1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/color1.png)
+
+##### Noir
+
+![color1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/color2.png)
+
 #### Photographies
 Les photos pouvant être utilisées sont celles du restaurant comme :
 
@@ -100,7 +106,7 @@ Les polices à utiliser sont :
 Cette police est celle du logo de l'entreprise foo(d).
 
 Elle est utilisée pour l'en-tête du site internet.
-##### Open Sans
+##### Open Sans Regular 400
 
 ![font2](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/font2.png)
 
