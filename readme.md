@@ -87,8 +87,8 @@ Les photos pouvant être utilisées sont celles du restaurant comme :
 
 ![img1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img1.jpg)
 <div style="display: flex; justify-content: space-between">
-<img alt="img2" src="https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img2.jpg" style="width: 48%">
-<img alt="img3" src="https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img3.jpg" style="width: 48%">
+<img alt="img2" src="https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img2.jpg" style="width: 750px">
+<img alt="img3" src="https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img3.jpg" style="width: 750px">
 </div>
 
 #### Polices
