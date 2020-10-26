@@ -125,6 +125,8 @@ Cette police sert à tous les types de textes du site internet, notamment ceux d
 
 ![font3](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/font3.png)
 
+Cette police convient aux boutons du site internet ainsi qu'au repère de représentation graphique.
+
 Aucun élémént n'est à conserver puisque le site internet va être créé dans sa globalité. 
 ### Wireframe et maquettage
 ## Spécificités et livrables
