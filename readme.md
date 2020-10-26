@@ -71,7 +71,7 @@ Le site aura une version mobile afin d’être adapté à l’utilisation sur t�
 ### La charte graphique
 Le logo du site est celui de l'entreprise foo(d).
 
-![Logo](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo.png)
+![logo](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo.png)
 
 Les couleurs qui vont être utilisées pour l'application web sont :
 * Blanc : #ffffff
@@ -79,7 +79,16 @@ Les couleurs qui vont être utilisées pour l'application web sont :
 
 Les polices à utiliser sont :
 * Baguette Font : pour le nom de l'entreprise
-* Open Sans : pour les textes
+
+![logo](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/font1.png)
+
+* Open Sans : pour les reste des textes
+
+![logo](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/font2.png)
+
+Les photos pouvant être utilisées sont celles du restaurant comme :
+
+![img1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img1.jpg)
 
 Aucun élémént n'est à conserver puisque le site internet va être créé dans sa globalité. 
 ### Wireframe et maquettage
@@ -87,9 +96,11 @@ Aucun élémént n'est à conserver puisque le site internet va être créé dan
 ### Le contenu du site
 Le prestataire doit reprendre le logo de l'entreprise ainsi que la police d'écriture du nom de cette dernière.
 
+Des photos du restaurant sont disponibles et peuvent être utilisées sur le site.
+
 Il doit prévoir l'achat de photo qui seront utilisées pour l'arrière-plan du site.
 ### Contraintes techniques
-Le site internet devra être hébergé.
+Le site internet devra être hébergé pour garantir son accessibilité permanente.
 
 Il faudra également assurer sa maintenance.
 ### Les livrables
