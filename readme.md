@@ -20,6 +20,7 @@ Email :
 * [Graphisme et ergonomie](#graphisme-et-ergonomie)
   * [La charte graphique](#la-charte-graphique)
     * [Logo](#logo)
+    * [Animations](#animations)
     * [Couleurs](#couleurs)
     * [Photographies](#photographies)
     * [Polices](#polices)
@@ -76,8 +77,9 @@ Le site aura une version mobile afin d’être adapté à l’utilisation sur t�
 #### Logo
 Le logo du site est celui de l'entreprise foo(d).
 
-![logo](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo.png)
+![logo1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo1.svg)
 
+#### Animations
 #### Couleurs
 Les couleurs qui vont être utilisées pour l'application web sont :
 ##### Blanc
