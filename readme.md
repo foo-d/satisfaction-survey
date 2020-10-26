@@ -32,7 +32,7 @@ foo(d) a été fondé en 2015 par deux amis, Alexy « Kaiser » Nicolau et Tangu
 
 D’abord ouvert en tant que simple « food truck » dans leur quartier du XVe arrondissement, leurs plats ont rapidement rencontré un petit succès dans le quartier grâce au bouche-à-oreille, les poussants à investir dans un restaurant et ainsi pouvoir accueillir un plus grand nombre de clients.
 
-Aujourd’hui fort de leur popularité, foo(d) propose un service 6 jours sur 7, du lundi au samedi, de 11 h à 15 h et de 18h à 00h00.
+Aujourd’hui fort de leur popularité, foo(d) propose un service 6 jours sur 7, du lundi au samedi, de 11 h à 15 h et de 18 h à 00 h 00.
 
 foo(d) est spécialisé dans les burgers fait maison, les salades et les pâtes. Un des principes du restaurant est de renouveler régulièrement sa carte afin de proposer de nouveaux plats continuellement.
 
@@ -69,6 +69,8 @@ Le site aura une version mobile afin d’être adapté à l’utilisation sur t�
 ## Graphisme et ergonomie
 ### La charte graphique
 Le logo du site est celui de l'entreprise foo(d).
+
+![Logo](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo.png)
 ### Wireframe et maquettage
 ## Spécificités et livrables
 ### Le contenu du site
