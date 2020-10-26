@@ -19,13 +19,17 @@ Email :
   * [Périmètre du projet](#primtre-du-projet)
 * [Graphisme et ergonomie](#graphisme-et-ergonomie)
   * [La charte graphique](#la-charte-graphique)
+    * [Logo](#logo)
+    * [Couleurs](#couleurs)
+    * [Photographies](#photographies)
+    * [Polices](#polices)
   * [Wireframe et maquettage](#wireframe-et-maquettage)
 * [Spécificités et livrables](#spcificits-et-livrables)
   * [Le contenu du site](#le-contenu-du-site)
   * [Contraintes techniques](#contraintes-techniques)
   * [Les livrables](#les-livrables)
   * [Le planning](#le-planning)
-* Auteurs
+* [Auteurs](#auteurs)
 ## Présentation de l'entreprise
 foo(d) est le mix parfait entre un fast food et un vrai restaurant, mêlant la rapidité avec de la bonne nourriture, installé dans le XVe arrondissement de Paris. foo(d) compte une vingtaine de salarié et sert plus d’une cinquantaine de couvert par service.
 
@@ -55,7 +59,7 @@ Le site internet a pour objectif d’améliorer la visibilité de l’entreprise
 
 L'objectif est d'obtenir un retour de la part des consommateurs afin d'améliorer les préstations de foo(d).
 ### Les cibles
-Nous visons un public professionel de tout âge pour la consommation sur place. Toutefois, le public visé par le site internet est plus jeune. Il est relatif aux tranches d’âges qui consomment le plus ce média.
+Nous visons un public de tout âge pour la consommation sur place. Toutefois, le public visé par le site internet est plus jeune. Il est relatif aux tranches d’âges qui consomment le plus ce média.
 ### Les objectifs quantitatifs
 Le volume de trafic et de contact visé est le volume d'une enquête de satisfaction d’un restaurant de ville classique.
 
@@ -69,26 +73,35 @@ Le site internet doit être multilingue pour améliorer l’accessibilité au vi
 Le site aura une version mobile afin d’être adapté à l’utilisation sur téléphone.
 ## Graphisme et ergonomie
 ### La charte graphique
+#### Logo
 Le logo du site est celui de l'entreprise foo(d).
 
 ![logo](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo.png)
 
+#### Couleurs
 Les couleurs qui vont être utilisées pour l'application web sont :
 * Blanc : #ffffff
 * Noir : #000000
-
-Les polices à utiliser sont :
-* Baguette Font : pour le nom de l'entreprise
-
-![logo](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/font1.png)
-
-* Open Sans : pour les reste des textes
-
-![logo](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/font2.png)
-
+#### Photographies
 Les photos pouvant être utilisées sont celles du restaurant comme :
 
 ![img1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img1.jpg)
+<img src="https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/img2.jpg" style="width: 50%">
+
+#### Polices
+Les polices à utiliser sont :
+##### Baguette Font
+
+![font1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/font1.png)
+
+Cette police est celle du logo de l'entreprise foo(d).
+
+Elle est utilisée pour l'en-tête du site internet.
+##### Open Sans
+
+![font2](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/font2.png)
+
+Cette police sert à tous les types de textes du site internet, notamment ceux du questionnaire.
 
 Aucun élémént n'est à conserver puisque le site internet va être créé dans sa globalité. 
 ### Wireframe et maquettage
