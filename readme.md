@@ -79,6 +79,9 @@ Le site aura une version mobile afin d’être adapté à l’utilisation sur t�
 Le logo du site est celui de l'entreprise foo(d).
 
 ![logo1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo1.svg)
+
+Sa version en noir et blanc.
+
 ![logo2](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/logo2.png)
 
 #### Typographie
@@ -118,6 +121,9 @@ Elle est utilisée pour l'en-tête du site internet.
 ![font2](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/font2.png)
 
 Cette police sert à tous les types de textes du site internet, notamment ceux du questionnaire.
+##### Ubuntu Title
+
+![font3](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/font3.png)
 
 Aucun élémént n'est à conserver puisque le site internet va être créé dans sa globalité. 
 ### Wireframe et maquettage
