@@ -98,8 +98,8 @@
     width: 100%;
 }
 
-.range {
-    display: flex;
+#number {
+    text-align: center;
 }
 
 .radio {
@@ -133,4 +133,8 @@ body {
     height: 100%;
     justify-content: center;
     margin: 0;
+}
+
+input[type=range] {
+    width: 100%;
 }

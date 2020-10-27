@@ -1,7 +1,8 @@
 import { next } from '../model/next.js';
 
 next('next1');
-let yearsOfSenority, question456;
+let yearsOfSenority, question5;
+const QUESTION456  =  [];
 /* global $ */
 $('.next').on('click', function () {
   switch ($(this).data('index')) {
@@ -22,9 +23,9 @@ $('.next').on('click', function () {
       break;
     case 3:
       next('next4');
-      question456.push(document.getElementById('question4').value, document
-        .getElementById('question5').value, document.getElementById('question6')
-        .value);
+      QUESTION456.push(document.getElementById('question4').value, question5,
+        document.getElementById('question6').value);
+      console.log(QUESTION456);
       break;
     case 4:
       next('next5');
@@ -51,6 +52,7 @@ $('.next').on('click', function () {
         for (let i = 0; i < RADIO.length; i++) RADIO[i].style.borderColor =
           'transparent';
         document.getElementById($(this)[0].id).style.borderColor = '#000000';
+        question5  = $(this).data('index');
       });
     }
   });

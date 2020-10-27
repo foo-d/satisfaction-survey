@@ -134,6 +134,13 @@ Cette police convient aux boutons du site internet ainsi qu'au repère de repré
 
 Aucun élémént n'est à conserver puisque le site internet va être créé dans sa globalité. 
 ### Wireframe et maquettage
+
+![Web 1920 - 1]()
+
+![Web 1920 - 2]()
+
+![Web 1920 - 3]()
+
 ## Spécificités et livrables
 ### Le contenu du site
 Le prestataire doit reprendre le logo de l'entreprise ainsi que la police d'écriture du nom de cette dernière.
