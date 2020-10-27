@@ -35,7 +35,7 @@ Email :
 ## Présentation de l'entreprise
 foo(d) est le mix parfait entre un fast food et un vrai restaurant, mêlant la rapidité avec de la bonne nourriture, installé dans le XVe arrondissement de Paris. foo(d) compte une vingtaine de salarié et sert plus d’une cinquantaine de couvert par service.
 
-foo(d) a été fondé en 2015 par deux amis, Alexy « Kaiser » Nicolau et Tanguy « SoTy » Sanquirgo. L’idée est née d’une problématique simple, Kaiser et SoTy ne supportaient plus de devoir choisir entre un sandwich chez Carrefour et un McDonald's lors de leurs courtes pauses du midi, et on donc choisit de créer une alternative, un repas rapide, mais délicieux et équilibré.
+foo(d) a été fondé en 2015 par deux amis, Alexy « Kaiser » Nicolau et Tanguy « SoTy » Sanquirgo. L’idée est née d’une problématique simple, Kaiser et SoTy ne supportaient plus de devoir choisir entre un sandwich chez Carrefour et un McDonald's lors de leurs courtes pauses du midi, et ont donc choisit de créer une alternative, un repas rapide, mais délicieux et équilibré.
 
 D’abord ouvert en tant que simple « food truck » dans leur quartier du XVe arrondissement, leurs plats ont rapidement rencontré un petit succès dans le quartier grâce au bouche-à-oreille, les poussants à investir dans un restaurant et ainsi pouvoir accueillir un plus grand nombre de clients.
 
@@ -98,9 +98,14 @@ Les couleurs qui vont être utilisées pour l'application web sont :
 ![color1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/color1.png)
 
 C'est à la fois la couleur du texte du nom de l'entreprise mais aussi celle d'arrière-plan du questionnaire de satisfaction.
-##### Noir
+##### Gris
 
 ![color1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/color2.png)
+
+Cette couleur va servir à donner du relief notamment sur les boutons du site internet grâce à des ombres.
+##### Noir
+
+![color1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/color3.png)
 
 Tous les textes du site internet sont de cette couleur.
 #### Photographies
