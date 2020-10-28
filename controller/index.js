@@ -1,8 +1,9 @@
 import { next } from '../model/next.js';
+import { radio } from '../model/radio.js';
 
 next('next1');
-let yearsOfSenority, question5;
-const QUESTION456  =  [];
+let question1, question6, question8;
+const QUESTION567  =  [];
 /* global $ */
 $('.next').on('click', function () {
   switch ($(this).data('index')) {
@@ -16,16 +17,16 @@ $('.next').on('click', function () {
         .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
         .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
         '.');
-      yearsOfSenority = document.getElementById('yearsOfSeniority').value;
+      question1 = document.getElementById('question1').value;
       break;
     case 2:
       next('next3');
       break;
     case 3:
       next('next4');
-      QUESTION456.push(document.getElementById('question4').value, question5,
-        document.getElementById('question6').value);
-      console.log(QUESTION456);
+      QUESTION567.push(document.getElementById('question5').value, question6,
+        document.getElementById('question7').value);
+      console.log(QUESTION567);
       break;
     case 4:
       next('next5');
@@ -44,16 +45,21 @@ $('.next').on('click', function () {
   }
   $.get('view/questions-' + $(this).data('index') + '.html', element => {
     $('#page').html(element);
-    if ($(this).data('index') === 2) {
-      $('#question4').on('input', _ => $('#number').text(document
-        .getElementById('question4').value));
-      $('.radio').on('click', function () {
-        const RADIO = document.getElementsByClassName('radio');
-        for (let i = 0; i < RADIO.length; i++) RADIO[i].style.borderColor =
-          'transparent';
-        document.getElementById($(this)[0].id).style.borderColor = '#000000';
-        question5  = $(this).data('index');
-      });
+    switch ($(this).data('index')) {
+      case 2:
+        $('#question5').on('input', _ => $('#number').text(document
+          .getElementById('question5').value));
+        $('.radio1').on('click', function () {
+          question6 = radio($(this));
+        });
+        break;
+      case 3:
+        $('.radio2').on('click', function () {
+          question8 = radio($(this));
+        });
+        break;
+      default:
+        break;
     }
   });
   const PAGE_NUMBER = $('#pageNumber');

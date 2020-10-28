@@ -116,14 +116,20 @@
     text-align: center;
 }
 
-.radio {
+.radios {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 0 0;
+}
+
+.radio1, .radio2 {
     border: transparent 1px solid;
     border-radius: 5px;
     padding: 15px;
 }
 
-.radios {
-    margin: 15px 0 0 0;
+.radio2 img {
+    width: 50px;
 }
 
 @font-face {
