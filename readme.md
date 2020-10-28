@@ -26,6 +26,8 @@ Email :
     * [Photographies](#photographies)
     * [Polices](#polices)
   * [Wireframe et maquettage](#wireframe-et-maquettage)
+    * [Arboresence](#arborescence)
+    * [Maquettes](#maquettes)
 * [Spécificités et livrables](#spcificits-et-livrables)
   * [Le contenu du site](#le-contenu-du-site)
   * [Contraintes techniques](#contraintes-techniques)
@@ -139,7 +141,11 @@ Cette police convient aux boutons du site internet ainsi qu'au repère de repré
 
 Aucun élémént n'est à conserver puisque le site internet va être créé dans sa globalité. 
 ### Wireframe et maquettage
+#### Arborescence
 
+![arborescence](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/arborescence.png)
+
+#### Maquettes
 La première page du site internet est une page d'identification avec un nom, un prénom, un âge, un email, un numéro de téléphone et deux autres champs relatifs au contexte.
 
 ![Web 1920 - 1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/Web%201920%20%E2%80%93%201.png)
