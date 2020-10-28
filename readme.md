@@ -6,11 +6,11 @@ Nom du projet : enquête de satisfaction
 
 Personne à contacter dans l'entreprise : Alexy Nicolau
 
-Adresse :
+Adresse : 15e arrondissement de Paris, France
 
-Tel :
+Tel : +33 6 15 12 19 98
 
-Email :
+Email : contact@foo-d.fr
 ## Sommaire
 * [Présentation de l'entreprise](#prsentation-de-lentreprise)
   * [Les objectifs du site](#les-objectifs-du-site)
@@ -26,7 +26,7 @@ Email :
     * [Photographies](#photographies)
     * [Polices](#polices)
   * [Wireframe et maquettage](#wireframe-et-maquettage)
-    * [Arboresence](#arborescence)
+    * [Arborescence](#arborescence)
     * [Maquettes](#maquettes)
 * [Spécificités et livrables](#spcificits-et-livrables)
   * [Le contenu du site](#le-contenu-du-site)
@@ -39,13 +39,13 @@ foo(d) est le mix parfait entre un fast food et un vrai restaurant, mêlant la r
 
 foo(d) a été fondé en 2015 par deux amis, Alexy « Kaiser » Nicolau et Tanguy « SoTy » Sanquirgo. L’idée est née d’une problématique simple, Kaiser et SoTy ne supportaient plus de devoir choisir entre un sandwich chez Carrefour et un McDonald's lors de leurs courtes pauses du midi, et ont donc choisit de créer une alternative, un repas rapide, mais délicieux et équilibré.
 
-D’abord ouvert en tant que simple « food truck » dans leur quartier du XVe arrondissement, leurs plats ont rapidement rencontré un petit succès dans le quartier grâce au bouche-à-oreille, les poussants à investir dans un restaurant et ainsi pouvoir accueillir un plus grand nombre de clients.
+D’abord ouvert en tant que simple « food truck » dans leur quartier du 15e arrondissement, leurs plats ont rapidement rencontré un petit succès dans le quartier grâce au bouche-à-oreille, les poussants à investir dans un restaurant et ainsi pouvoir accueillir un plus grand nombre de clients.
 
 Aujourd’hui fort de leur popularité, foo(d) propose un service 6 jours sur 7, du lundi au samedi, de 11 h à 15 h et de 18 h à 00 h 00.
 
 foo(d) est spécialisé dans les burgers fait maison, les salades et les pâtes. Un des principes du restaurant est de renouveler régulièrement sa carte afin de proposer de nouveaux plats continuellement.
 
-En 2019, foo(d) à réaliser un chiffre d’affaires de 450 000 €.
+En 2019, foo(d) a réalisé un chiffre d’affaires de 450 000 €.
 
 foo(d) est entouré de nombreux partenaires, notamment concernant l’approvisionnement alimentaire.
 
