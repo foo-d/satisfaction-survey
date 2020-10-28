@@ -3,7 +3,7 @@ import { radio } from '../model/radio.js';
 
 next('next1');
 let question1, question6, question8;
-const QUESTION567  =  [];
+const QUESTION567 = [];
 /* global $ */
 $('.next').on('click', function () {
   switch ($(this).data('index')) {
