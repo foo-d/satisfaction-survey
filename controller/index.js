@@ -43,7 +43,6 @@ $('.next').on('click', function () {
         .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
         ' for taking the time to answer this questionnaire. Based on your ans' +
         'wers, the restaurant obtains the score of:');
-      /* TODO: chart */
       break;
     case 4:
       const ELEMENT = document.createElement('a');
@@ -90,6 +89,24 @@ const getPage = element => {
         let score = 0;
         for (const PROPERTY in a) score += parseInt(a[PROPERTY]);
         $('#score').html(score / 8 + '/10');
+        /* TODO: chart */
+        d3.csv('satisfaction-survey.csv').then(players => {
+          const COLOR = ['#FFDDBD', '#FCDFBE', '#F9E1BF', '#F6E3C1', '#F4E5C2',
+            '#F1E7C4', '#EEE9C5', '#ECEBC6', '#E9EDC8', '#E6EFC9', '#E4F1CB'];
+          // noinspection JSUnresolvedVariable
+          new Chart('ctx', {
+            type: 'bar',
+            data: {
+              labels: players.map(d => d.question0).sort((x, y) => x - y),
+              datasets: [
+                {
+                  data: players.map(d => d.score),
+                  backgroundColor: players.map(d => COLOR[d.score])
+                }
+              ]
+            }
+          });
+        });
         break;
       default:
         break;
