@@ -21,23 +21,20 @@
         <h2>Satisfaction survey</h2>
         <h3 id="cookie">Hello, this questionnaire takes 3 minutes to complete. Thank you in advance.</h3>
         <div id="page">
-            <h4>Demographics</h4>
-            <div>
-                <label class="textNumber">
-                    <input id="lastName" placeholder="Last name" type="text">
-                    <input id="firstName" placeholder="First name" type="text">
-                    <input id="age" placeholder="Age" type="number">
-                    <input id="email" placeholder="Email" type="email">
-                    <input id="phoneNumber" placeholder="Phone number" type="number">
-                    <input id="question1" placeholder="How often you have eaten out in the past month" type="number">
-                </label>
-            </div>
         </div>
-        <a class="next" data-index="1" href="javascript:void(0);" id="next1">Start survey</a>
-        <a class="next" data-index="2" href="javascript:void(0);" id="next2">Next questions</a>
-        <a class="next" data-index="3" href="javascript:void(0);" id="next3">Next questions</a>
-        <a class="next" data-index="4" href="javascript:void(0);" id="next4">End survey</a>
-        <a class="next" data-index="5" href="javascript:void(0);" id="next5">Download survey</a>
+        <a class="next" data-from="0" data-to="1" href="javascript:void(0);" id="next1">Start survey</a>
+        <div class="pageButtons">
+            <a class="next" data-from="1" data-to="2" href="javascript:void(0);" id="next2">Next questions</a>
+        </div>
+        <div class="pageButtons">
+            <a class="previous" data-from="2" data-to="1" href="javascript:void(0);" id="previous1">Previous questions</a>
+            <a class="next" data-from="2" data-to="3" href="javascript:void(0);" id="next3">Next questions</a>
+        </div>
+        <div class="pageButtons">
+            <a class="previous" data-from="3" data-to="2" href="javascript:void(0);" id="previous2">Previous questions</a>
+            <a class="next" data-from="3" data-to="4" href="javascript:void(0);" id="next4">End survey</a>
+        </div>
+        <a class="next" data-from="4" data-to="5" href="javascript:void(0);" id="next5">Download survey</a>
         <div id="pageNumber">1/5</div>
     </div>
     <div>

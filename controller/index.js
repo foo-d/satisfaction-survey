@@ -1,14 +1,17 @@
-import { next } from '../model/next.js';
+import { changePageButtons } from '../model/change-page-buttons.js';
 import { radio } from '../model/radio.js';
 
-next('next1');
-let question1, question6, question8;
-const QUESTION567 = [];
+$.get('view/questions-0.html', element => $('#page').html(element));
+changePageButtons(0);
+let question0;
+let questions456, questions78 = [];
+let question5, question7 = 2;
+const PAGE_NUMBER = $('#pageNumber');
 /* global $ */
 $('.next').on('click', function () {
-  switch ($(this).data('index')) {
-    case 1:
-      next('next2');
+  changePageButtons($(this).data('to'));
+  switch ($(this).data('from')) {
+    case 0:
       document.cookie = 'lastName=' + document.getElementById('lastName')
         .value + ';';
       document.cookie = 'firstName=' + document.getElementById('firstName')
@@ -17,21 +20,21 @@ $('.next').on('click', function () {
         .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
         .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
         '.');
-      question1 = document.getElementById('question1').value;
+      question0 = document.getElementById('question0').value;
+      break;
+    case 1:
+      /* TODO: get questions 1, 2 & 3 */
       break;
     case 2:
-      next('next3');
+      questions456 = [document.getElementById('question4').value, question5,
+        document.getElementById('question6').value];
       break;
     case 3:
-      next('next4');
-      QUESTION567.push(document.getElementById('question5').value, question6,
-        document.getElementById('question7').value);
-      console.log(QUESTION567);
+      questions78 = [question7];
+      /* TODO: get question 8 */
+      console.log(questions78);
       break;
     case 4:
-      next('next5');
-      break;
-    case 5:
       const ELEMENT = document.createElement('a');
       const CSV = 'data:text/csv;charset=utf-8,' + document.cookie.split('; ')
         .map(element => element.split('=')[1]).join(',') + '\n';
@@ -43,25 +46,38 @@ $('.next').on('click', function () {
     default:
       break;
   }
-  $.get('view/questions-' + $(this).data('index') + '.html', element => {
-    $('#page').html(element);
-    switch ($(this).data('index')) {
+  getPage($(this));
+  PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5');
+});
+$('.previous').on('click', function () {
+  changePageButtons($(this).data('to'));
+  if ($(this).data('from') === 2) {
+    question5 = 2;
+  } else if ($(this).data('from') === 3) {
+    question7 = 2;
+  }
+  getPage($(this));
+  PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) - 1 + '/5');
+});
+
+const getPage = element => {
+  $.get('view/questions-' + element.data('to') + '.html', page => {
+    $('#page').html(page);
+    switch (element.data('to')) {
       case 2:
-        $('#question5').on('input', _ => $('#number').text(document
-          .getElementById('question5').value));
+        $('#question4').on('input', _ => $("#number").text(document
+          .getElementById('question4').value));
         $('.radio1').on('click', function () {
-          question6 = radio($(this));
+          question5 = radio($(this));
         });
         break;
       case 3:
         $('.radio2').on('click', function () {
-          question8 = radio($(this));
+          question7 = radio($(this));
         });
         break;
       default:
         break;
     }
   });
-  const PAGE_NUMBER = $('#pageNumber');
-  PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5');
-});
+};
