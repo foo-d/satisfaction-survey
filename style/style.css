@@ -64,6 +64,11 @@
     width: 100%;
 }
 
+#cookie {
+    text-align: center;
+    width: 90%;
+}
+
 #page {
     align-items: center;
     display: flex;

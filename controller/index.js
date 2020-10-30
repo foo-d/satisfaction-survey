@@ -1,38 +1,49 @@
+import { a } from '../model/a.js';
 import { changePageButtons } from '../model/change-page-buttons.js';
 import { radio } from '../model/radio.js';
 
 $.get('view/questions-0.html', element => $('#page').html(element));
 changePageButtons(0);
+const COOKIE = $('#cookie');
 let question0;
-let questions456, questions78 = [];
-let question5, question7 = 2;
+let question5 = 2;
+let question7 = 2;
 const PAGE_NUMBER = $('#pageNumber');
 /* global $ */
 $('.next').on('click', function () {
-  changePageButtons($(this).data('to'));
   switch ($(this).data('from')) {
     case 0:
       document.cookie = 'lastName=' + document.getElementById('lastName')
         .value + ';';
       document.cookie = 'firstName=' + document.getElementById('firstName')
         .value + ';';
-      $('#cookie').html('Hello ' + document.cookie.split('; ').find(row => row
+      COOKIE.html('Hello ' + document.cookie.split('; ').find(row => row
         .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
         .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
         '.');
       question0 = document.getElementById('question0').value;
       break;
     case 1:
-      /* TODO: get questions 1, 2 & 3 */
+      a.question1 = document.getElementById('question11').value * document
+        .getElementById('question12').value * 10 / 8;
+      a.question2 = document.querySelector('input[name="question2"]:checked')
+        .value * 10 / 4;
+      a.question3 = document.getElementById('question3').value === '' ? 10 : 0;
       break;
     case 2:
-      questions456 = [document.getElementById('question4').value, question5,
-        document.getElementById('question6').value];
+      a.question4 = document.getElementById('question4').value;
+      a.question5 = question5 * 10 / 3;
+      a.question6 = document.getElementById('question6').value / 10;
       break;
     case 3:
-      questions78 = [question7];
-      /* TODO: get question 8 */
-      console.log(questions78);
+      a.question7 = question7 * 10 / 3;
+      a.question8 = document.getElementById('question8').checked ? 10 : 0;
+      COOKIE.html('Thank you ' + document.cookie.split('; ').find(row => row
+        .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
+        .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
+        ' for taking the time to answer this questionnaire. Based on your ans' +
+        'wers, the restaurant obtains the score of:');
+      /* TODO: chart */
       break;
     case 4:
       const ELEMENT = document.createElement('a');
@@ -50,7 +61,6 @@ $('.next').on('click', function () {
   PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5');
 });
 $('.previous').on('click', function () {
-  changePageButtons($(this).data('to'));
   if ($(this).data('from') === 2) {
     question5 = 2;
   } else if ($(this).data('from') === 3) {
@@ -76,8 +86,14 @@ const getPage = element => {
           question7 = radio($(this));
         });
         break;
+      case 4:
+        let score = 0;
+        for (const PROPERTY in a) score += parseInt(a[PROPERTY]);
+        $('#score').html(score / 8 + '/10');
+        break;
       default:
         break;
     }
   });
+  changePageButtons(element.data('to'));
 };

@@ -1,0 +1,10 @@
+export const a = {
+  question1: 0,
+  question2: 0,
+  question3: 0,
+  question4: 0,
+  question5: 0,
+  question6: 0,
+  question7: 0,
+  question8: 0
+};

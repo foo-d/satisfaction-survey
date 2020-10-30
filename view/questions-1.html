@@ -3,18 +3,18 @@
     How often do you use the foo(d) services?
     <div class="select">
         <label>
-            <select>
-                <option value="once">Once</option>
-                <option value="severalTimes">Several times</option>
+            <select id="question11">
+                <option value="1">Once</option>
+                <option selected value="2">Several times</option>
             </select>
         </label>
         &nbspa&nbsp
         <label>
-            <select>
-                <option value="day">day</option>
-                <option value="week">week</option>
-                <option value="month">month</option>
-                <option value="year">year</option>
+            <select id="question12">
+                <option value="4">day</option>
+                <option value="3">week</option>
+                <option selected value="2">month</option>
+                <option value="1">year</option>
             </select>
         </label>
         .
@@ -24,19 +24,19 @@
     What is your favorite portion of the foo(d) services?
     <div>
         <div>
-            <input id="question21" name="question2" type="radio">
+            <input id="question21" name="question2" type="radio" value="1">
             <label for="question21">A main course</label>
         </div>
         <div>
-            <input id="question22" name="question2" type="radio">
+            <input id="question22" name="question2" type="radio" value="2">
             <label for="question22">A starter plus main course menu</label>
         </div>
         <div>
-            <input id="question23" name="question2" type="radio">
+            <input checked id="question23" name="question2" type="radio" value="3">
             <label for="question23">A main course plus dessert menu</label>
         </div>
         <div>
-            <input id="question24" name="question2" type="radio">
+            <input id="question24" name="question2" type="radio" value="4">
             <label for="question24">A starter plus main course plus dessert menu</label>
         </div>
     </div>
