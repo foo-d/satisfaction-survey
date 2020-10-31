@@ -1,3 +1,4 @@
+/*///////////////////////////////////////////////////////////*//* #background */
 #background {
     height: 100%;
     position: fixed;
@@ -5,6 +6,7 @@
     width: 100%;
 }
 
+/**************************************************//* #img1 *//* #background */
 #img1 {
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .25)),
     url("../img/img1.jpg");
@@ -18,16 +20,18 @@
     width: 100%;
 }
 
+/**************************************************//* #img2 *//* #background */
 #img2 {
     background-image: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),
     url("../img/img2.png");
     background-size: contain;
-    height: 60%;
     bottom: 0;
+    height: 60%;
     position: absolute;
     width: 100%;
 }
 
+/*///////////////////////////////////////////////////////////*//* #foreground */
 #foreground {
     align-items: center;
     display: flex;
@@ -36,6 +40,7 @@
     width: 100%;
 }
 
+/*************************************************//* #title *//* #foreground */
 #title {
     color: #ffffff;
     display: flex;
@@ -52,6 +57,7 @@
     opacity: 0;
 }
 
+/**************************************************//* #home *//* #foreground */
 #home {
     align-items: center;
     background: #ffffff;
@@ -64,42 +70,14 @@
     width: 100%;
 }
 
-#cookie {
-    text-align: center;
-    width: 90%;
-}
-
-#page {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-#page > div {
-    margin: 15px;
-    width: 50%;
-}
-
-.textNumber {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.textNumber input {
-    border: #000000 1px solid;
-    border-radius: 5px;
-    margin: 15px;
-    padding: 15px;
-    width: 100%;
-}
-
 .next, .previous {
+    display: none;
+}
+
+.next, .previous, .numberAndText input {
     border: #000000 1px solid;
     border-radius: 5px;
-    display: none;
-    margin: 15px;
+    margin: 15px 0 15px 0;
     padding: 15px;
     text-align: center;
 }
@@ -110,22 +88,51 @@
 
 .pageButtons {
     display: flex;
+    justify-content: space-evenly;
+    width: 50%;
 }
 
-.select {
+/*************************************//* #cookie *//* #home *//* #foreground */
+#cookie {
+    text-align: center;
+    width: 90%;
+}
+
+/***************************************//* #page *//* #home *//* #foreground */
+#page {
+    align-items: center;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+/**********************//* #page > div *//* #page *//* #home *//* #foreground */
+#page > div {
+    margin: 0 0 15px 0;
+    width: 50%;
+}
+
+.numberAndText {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.numberAndText input {
+    text-align: left;
+    width: 100%;
 }
 
 .textArea {
     width: 100%;
 }
 
-#number {
+/*********************//* #rangeNumber *//* #page *//* #home *//* #foreground */
+#rangeNumber {
     text-align: center;
 }
 
-.radios {
+.radio {
     display: flex;
     justify-content: space-between;
     margin: 15px 0 0 0;
@@ -141,10 +148,12 @@
     width: 50px;
 }
 
+/*********//* #question52, #question72 *//* #page *//* #home *//* #foreground */
 #question52, #question72 {
     border-color: #000000;
 }
 
+/*//////////////////////////////////////////////*//* @font-face *//* document */
 @font-face {
     font-display: swap;
     font-family: "Baguette";
@@ -157,11 +166,13 @@
     src: url("../font/OpenSans-Regular.ttf");
 }
 
+/*///////////////////////////////////////////////////////*//* a *//* document */
 a:link, a:visited {
     color: #000000;
     text-decoration: none;
 }
 
+/*////////////////////////////////////////////////////*//* body *//* document */
 body {
     display: flex;
     font-family: "Open Sans", serif;
@@ -170,6 +181,7 @@ body {
     margin: 0;
 }
 
+/*///////////////////////////////////////*//* input[type=range] *//* document */
 input[type=range] {
     width: 100%;
 }

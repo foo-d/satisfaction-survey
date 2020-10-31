@@ -74,7 +74,7 @@ const getPage = element => {
     $('#page').html(page);
     switch (element.data('to')) {
       case 2:
-        $('#question4').on('input', _ => $("#number").text(document
+        $('#question4').on('input', _ => $("#rangeNumber").text(document
           .getElementById('question4').value));
         $('.radio1').on('click', function () {
           question5 = radio($(this));
@@ -91,7 +91,7 @@ const getPage = element => {
         $('#score').html(score / 8 + '/10');
         /* TODO: chart */
         d3.csv('satisfaction-survey.csv').then(players => {
-          const COLOR = ['#FFDDBD', '#FCDFBE', '#F9E1BF', '#F6E3C1', '#F4E5C2',
+          const COLORS = ['#FFDDBD', '#FCDFBE', '#F9E1BF', '#F6E3C1', '#F4E5C2',
             '#F1E7C4', '#EEE9C5', '#ECEBC6', '#E9EDC8', '#E6EFC9', '#E4F1CB'];
           // noinspection JSUnresolvedVariable
           new Chart('ctx', {
@@ -100,8 +100,9 @@ const getPage = element => {
               labels: players.map(d => d.question0).sort((x, y) => x - y),
               datasets: [
                 {
+                  label: '',
                   data: players.map(d => d.score),
-                  backgroundColor: players.map(d => COLOR[d.score])
+                  backgroundColor: players.map(d => COLORS[d.score])
                 }
               ]
             }
