@@ -1,11 +1,14 @@
 import { a } from '../model/a.js';
 import { changePageButtons } from '../model/change-page-buttons.js';
+import { csv } from '../model/csv.js';
 import { radio } from '../model/radio.js';
 
 $.get('view/questions-0.html', element => $('#page').html(element));
 changePageButtons(0);
+let required = true;
 const COOKIE = $('#cookie');
-let question0;
+const QUESTION0 = ['lastName', 'firstName', 'age', 'email', 'phoneNumber',
+  'question0'];
 let question5 = 2;
 let question7 = 2;
 const PAGE_NUMBER = $('#pageNumber');
@@ -13,15 +16,25 @@ const PAGE_NUMBER = $('#pageNumber');
 $('.next').on('click', function () {
   switch ($(this).data('from')) {
     case 0:
-      document.cookie = 'lastName=' + document.getElementById('lastName')
-        .value + ';';
-      document.cookie = 'firstName=' + document.getElementById('firstName')
-        .value + ';';
-      COOKIE.html('Hello ' + document.cookie.split('; ').find(row => row
-        .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
-        .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
-        '.');
-      question0 = document.getElementById('question0').value;
+      required = true;
+      for (const PROPERTY in QUESTION0) {
+        if (required === false || document.getElementById(QUESTION0[PROPERTY])
+          .value === '') {
+          required = false;
+        }
+      }
+      if (required) {
+        document.cookie = 'lastName=' + document.getElementById('lastName')
+          .value + ';';
+        document.cookie = 'firstName=' + document.getElementById('firstName')
+          .value + ';';
+        COOKIE.html('Hello ' + document.cookie.split('; ').find(row => row
+          .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
+          .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
+          '.');
+        document.cookie = 'question0=' + document.getElementById('question0')
+          .value + ';';
+      }
       break;
     case 1:
       a.question1 = document.getElementById('question11').value * document
@@ -46,8 +59,8 @@ $('.next').on('click', function () {
       break;
     case 4:
       const ELEMENT = document.createElement('a');
-      const CSV = 'data:text/csv;charset=utf-8,' + document.cookie.split('; ')
-        .map(element => element.split('=')[1]).join(',') + '\n';
+      const CSV = 'data:text/csv;charset=utf-8,' + csv + '\n' + document.cookie
+        .split('; ').map(element => element.split('=')[1]).join(',') + '\n';
       ELEMENT.setAttribute('download', 'satisfaction-survey.csv');
       ELEMENT.setAttribute('href', encodeURI(CSV));
       document.body.appendChild(ELEMENT);
@@ -56,8 +69,13 @@ $('.next').on('click', function () {
     default:
       break;
   }
-  getPage($(this));
-  PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5');
+  if (required) {
+    document.getElementById('required').style.display = 'none';
+    getPage($(this));
+    PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5');
+  } else {
+    document.getElementById('required').style.display = 'block';
+  }
 });
 $('.previous').on('click', function () {
   if ($(this).data('from') === 2) {
@@ -86,13 +104,14 @@ const getPage = element => {
         });
         break;
       case 4:
+        $('#submitButton').on('click', _ => $('#comment')
+          .html('Thanks for leaving a comment.'));
         let score = 0;
         for (const PROPERTY in a) score += parseInt(a[PROPERTY]);
         $('#score').html(score / 8 + '/10');
-        /* TODO: chart */
+        const COLORS = ['#FFDDBD', '#FCDFBE', '#F9E1BF', '#F6E3C1', '#F4E5C2',
+          '#F1E7C4', '#EEE9C5', '#ECEBC6', '#E9EDC8', '#E6EFC9', '#E4F1CB'];
         d3.csv('satisfaction-survey.csv').then(players => {
-          const COLORS = ['#FFDDBD', '#FCDFBE', '#F9E1BF', '#F6E3C1', '#F4E5C2',
-            '#F1E7C4', '#EEE9C5', '#ECEBC6', '#E9EDC8', '#E6EFC9', '#E4F1CB'];
           // noinspection JSUnresolvedVariable
           new Chart('ctx', {
             type: 'bar',
@@ -100,14 +119,37 @@ const getPage = element => {
               labels: players.map(d => d.question0).sort((x, y) => x - y),
               datasets: [
                 {
-                  label: '',
                   data: players.map(d => d.score),
                   backgroundColor: players.map(d => COLORS[d.score])
                 }
               ]
-            }
+            },
+            options: {
+              legend: {
+                display: false
+              },
+              scales: {
+                xAxes: [
+                  {
+                    scaleLabel: {
+                      display: true,
+                      labelString: 'Attendance at restaurants each month',
+                    }
+                  }
+                ],
+                yAxes: [
+                  {
+                    scaleLabel: {
+                      display: true,
+                      labelString: 'Score',
+                    }
+                  }
+                ]
+              }
+            },
           });
         });
+        document.cookie = 'score=' + score / 8 + ';';
         break;
       default:
         break;

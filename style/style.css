@@ -124,6 +124,7 @@
 }
 
 .textArea {
+    height: 100px;
     width: 100%;
 }
 
@@ -151,6 +152,32 @@
 /*********//* #question52, #question72 *//* #page *//* #home *//* #foreground */
 #question52, #question72 {
     border-color: #000000;
+}
+
+/**************************//* #submit *//* #page *//* #home *//* #foreground */
+#submit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*******//* #submitButton *//* #submit *//* #page *//* #home *//* #foreground */
+#submitButton {
+    border: #000000 1px solid;
+    border-radius: 5px;
+    margin: 15px 0 15px 0;
+    padding: 15px;
+    text-align: center;
+}
+
+#submitButton:hover {
+    box-shadow: inset 0 0 5px #606060;
+}
+
+/***********************************//* #required *//* #home *//* #foreground */
+#required {
+    color: #ff0000;
+    display: none;
 }
 
 /*//////////////////////////////////////////////*//* @font-face *//* document */

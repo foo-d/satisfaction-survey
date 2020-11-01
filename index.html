@@ -20,8 +20,8 @@
     <div id="home">
         <h2>Satisfaction survey</h2>
         <h3 id="cookie">Hello, this questionnaire takes 3 minutes to complete. Thank you in advance.</h3>
-        <div id="page">
-        </div>
+        <div id="page"></div>
+        <h4 id="required">No fields must be empty.</h4>
         <a class="next" data-from="0" data-to="1" href="javascript:void(0);" id="next1">Start survey</a>
         <div class="pageButtons">
             <a class="next" data-from="1" data-to="2" href="javascript:void(0);" id="next2">Next questions</a>
@@ -34,7 +34,7 @@
             <a class="previous" data-from="3" data-to="2" href="javascript:void(0);" id="previous2">Previous questions</a>
             <a class="next" data-from="3" data-to="4" href="javascript:void(0);" id="next4">End survey</a>
         </div>
-        <a class="next" data-from="4" data-to="5" href="javascript:void(0);" id="next5">Download survey</a>
+        <a class="next" data-from="4" data-to="4" href="javascript:void(0);" id="next5">Download statistics as CSV</a>
         <div id="pageNumber">1/5</div>
     </div>
     <div>
@@ -45,5 +45,6 @@
 <script src="dist/Chart.min.js"></script>
 <script src="dist/d3.min.js"></script>
 <script src="dist/jquery.min.js"></script>
+<script src="dist/papaparse.min.js"></script>
 </body>
 </html>
