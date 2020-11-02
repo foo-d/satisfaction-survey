@@ -3,9 +3,9 @@
 
 import { a, changePageButtons, csv, easeIn, radio } from '../dist/model.min.js';
 
-easeIn();
 $.get('view/questions-0.html', element => $('#page').html(element));
 changePageButtons(0);
+easeIn();
 let required = true;
 const COOKIE = $('#cookie');
 const QUESTION0 = ['lastName', 'firstName', 'age', 'email', 'phoneNumber',
