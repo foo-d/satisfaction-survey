@@ -63,17 +63,18 @@ $('.next').on('click', function () {
   }
   if (required) {
     document.getElementById('required').style.display = 'none';
-    anime({
-      targets: '#home',
-      'margin-right': '3840px',
-      easing: 'easeInOutBack',
-      complete: _ => {
-        getPage($(this));
-        PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) !== 5 ?
-          parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5' : '5/5');
-        easeIn();
-      }
-    });
+    if (parseInt(PAGE_NUMBER.text().charAt(0)) !== 5) {
+      anime({
+        targets: '#home',
+        'margin-right': '3840px',
+        easing: 'easeInOutBack',
+        complete: _ => {
+          getPage($(this));
+          PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5');
+          easeIn();
+        }
+      });
+    }
   } else {
     document.getElementById('required').style.display = 'block';
   }
