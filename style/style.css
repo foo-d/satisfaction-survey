@@ -65,6 +65,29 @@
     opacity: 0;
 }
 
+/**************************************//* #logo *//* #title *//* #foreground */
+#logo {
+    margin: 57px;
+}
+
+/************************************//* #social *//* #title *//* #foreground */
+#social {
+    align-items: center;
+    display: flex;
+}
+
+/*********************//* #social a *//* #social *//* #title *//* #foreground */
+#social a {
+    border-radius: 99px;
+    height: 50px;
+    margin: 15px;
+}
+
+/*******************//* #social img *//* #social *//* #title *//* #foreground */
+#social img {
+    height: 50px;
+}
+
 /**************************************************//* #home *//* #foreground */
 #home {
     align-items: center;
