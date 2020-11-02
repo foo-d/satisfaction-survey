@@ -1,8 +1,10 @@
 import { a } from '../model/a.js';
 import { changePageButtons } from '../model/change-page-buttons.js';
 import { csv } from '../model/csv.js';
+import { easeIn } from '../model/ease-in.js';
 import { radio } from '../model/radio.js';
 
+easeIn();
 $.get('view/questions-0.html', element => $('#page').html(element));
 changePageButtons(0);
 let required = true;
@@ -71,8 +73,17 @@ $('.next').on('click', function () {
   }
   if (required) {
     document.getElementById('required').style.display = 'none';
-    getPage($(this));
-    PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5');
+    anime({
+      targets: '#home',
+      'margin-right': '3840px',
+      easing: 'easeInOutBack',
+      complete: _ => {
+        getPage($(this));
+        PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) !== 5 ?
+          parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5' : '5/5');
+        easeIn();
+      }
+    });
   } else {
     document.getElementById('required').style.display = 'block';
   }
@@ -104,8 +115,14 @@ const getPage = element => {
         });
         break;
       case 4:
-        $('#submitButton').on('click', _ => $('#comment')
-          .html('Thanks for leaving a comment.'));
+        $('#submitButton').on('click', _ => {
+          if ( document.getElementById('question9').value !== '') {
+            document.getElementById('required').style.display = 'none';
+            $('#comment').html('Thanks for leaving a comment.');
+          } else {
+            document.getElementById('required').style.display = 'block';
+          }
+        });
         let score = 0;
         for (const PROPERTY in a) score += parseInt(a[PROPERTY]);
         $('#score').html(score / 8 + '/10');
