@@ -42,8 +42,8 @@ $('.next').on('click', function () {
       }
       break;
     case 1:
-      a.question1 = document.getElementById('question11').value * document
-        .getElementById('question12').value * 10 / 8;
+      a.question1 = document.getElementById('question11' + aLang).value *
+        document.getElementById('question12' + aLang).value * 10 / 8;
       a.question2 = document.querySelector('input[name="question2"]:checked')
         .value * 10 / 4;
       a.question3 = document.getElementById('question3').value === '' ? 10 : 0;
