@@ -85,7 +85,13 @@
 
 /*******************//* #social img *//* #social *//* #title *//* #foreground */
 #social img {
+    filter: grayscale(25%);
     height: 50px;
+    transition: .15s;
+}
+
+#social img:hover {
+    filter: grayscale(0);
 }
 
 /**************************************************//* #home *//* #foreground */
@@ -134,6 +140,7 @@
     justify-content: space-between;
     width: 90%;
 }
+
 /*************************************//* #filler *//* #home *//* #foreground */
 #filler {
     width: 48px;
