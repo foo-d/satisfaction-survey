@@ -30,10 +30,6 @@ $('.next').on('click', function () {
           .value + ';';
         document.cookie = 'firstName=' + document.getElementById('firstName')
           .value + ';';
-        COOKIE.html('Hello ' + document.cookie.split('; ').find(row => row
-          .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
-          .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
-          '.');
         document.cookie = 'question0=' + document.getElementById('question0')
           .value + ';';
       }
@@ -102,6 +98,12 @@ const getPage = element => {
   $.get('view/questions-' + element.data('to') + '.html', page => {
     $('#page').html(page);
     switch (element.data('to')) {
+      case 1:
+        COOKIE.html('Hello ' + document.cookie.split('; ').find(row => row
+          .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
+          .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
+          '.');
+        break;
       case 2:
         $('#question4').on('input', _ => $("#rangeNumber").text(document
           .getElementById('question4').value));
