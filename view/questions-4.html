@@ -1,19 +1,32 @@
 <h2 id="score"></h2>
-<h4>Comments</h4>
+<h4>
+    <span lang="en">Comment</span>
+    <span lang="fr">Commentaire</span>
+</h4>
 <div id="comment">
-    If you have a comment about the satisfaction survey, you can leave it here.
+    <span lang="en">If you have a comment about the satisfaction survey, you can leave it here.</span>
+    <span lang="fr">Si vous avez un commentaire sur l'enquête de satisfaction, vous pouvez le laisser ici.</span>
     <div>
-        <label for="question9"></label>
-        <textarea class="textArea" id="question9" placeholder="Write your comment here..."></textarea>
+        <label for="question91"></label>
+        <textarea class="textArea" id="question91" lang="en" placeholder="Write your comment here..."></textarea>
+        <label for="question92"></label>
+        <textarea class="textArea" id="question92" lang="fr" placeholder="Écrivez votre commentaire ici..."></textarea>
     </div>
     <div>
-        <h4 id="required">You must write a comment to be able to submit one.</h4>
+        <h4 id="required">
+            <span lang="en">You must write a comment to be able to submit one.</span>
+            <span lang="fr">Vous devez rédiger un commentaire pour pouvoir en soumettre un.</span>
+        </h4>
     </div>
     <div id="submit">
-        <a id="submitButton" href="javascript:void(0);">Submit comment</a>
+        <a class="submitButton" href="javascript:void(0);" lang="en">Submit comment</a>
+        <a class="submitButton" href="javascript:void(0);" lang="fr">Envoyer un commentaire</a>
     </div>
 </div>
-<h4>Statistics</h4>
+<h4>
+    <span lang="en">Statistics</span>
+    <span lang="fr">Statistiques</span>
+</h4>
 <div>
     <canvas id="ctx"></canvas>
 </div>

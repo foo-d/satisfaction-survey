@@ -1,23 +1,31 @@
 /* terser controller/*.js -o dist/controller.min.js -c -m */
 /* terser model/*.js -o dist/model.min.js -c -m */
 
-import { a, changePageButtons, csv, easeIn, radio } from '../dist/model.min.js';
+import { a, changePageButtons, csv, easeIn, lang, radio } from
+  '../dist/model.min.js';
 
-$.get('view/questions-0.html', element => $('#page').html(element));
-changePageButtons(0);
+let aLang = lang(navigator.language.substring(0, 2));
+$.get('view/questions-0.html', element => {
+  $('#page').html(element);
+  changePageButtons(0);
+  lang(aLang);
+});
 easeIn();
+/* global $ */
+$('#lang').on('click', _ => {
+  if (aLang === 'fr') aLang = lang('en'); else aLang = lang('fr');
+});
 let required = true;
 const COOKIE = $('#cookie');
-const QUESTION0 = ['lastName', 'firstName', 'age', 'email', 'phoneNumber',
-  'question0'];
 let question5 = 2;
 let question7 = 2;
 const PAGE_NUMBER = $('#pageNumber');
-/* global $ */
 $('.next').on('click', function () {
   switch ($(this).data('from')) {
     case 0:
       required = true;
+      const QUESTION0 = ['lastName' + aLang, 'firstName' + aLang, 'age' + aLang,
+        'email' + aLang, 'phoneNumber' + aLang, 'question0' + aLang];
       for (const PROPERTY in QUESTION0) {
         if (required === false || document.getElementById(QUESTION0[PROPERTY])
           .value === '') {
@@ -25,12 +33,12 @@ $('.next').on('click', function () {
         }
       }
       if (required) {
-        document.cookie = 'lastName=' + document.getElementById('lastName')
-          .value + ';';
-        document.cookie = 'firstName=' + document.getElementById('firstName')
-          .value + ';';
-        document.cookie = 'question0=' + document.getElementById('question0')
-          .value + ';';
+        document.cookie = 'lastName=' + document.getElementById('lastName' +
+          aLang).value + ';';
+        document.cookie = 'firstName=' + document.getElementById('firstName' +
+          aLang).value + ';';
+        document.cookie = 'question0=' + document.getElementById('question0' +
+          aLang).value + ';';
       }
       break;
     case 1:
@@ -109,9 +117,11 @@ $('.previous').on('click', function () {
 const getPage = element => {
   $.get('view/questions-' + element.data('to') + '.html', page => {
     $('#page').html(page);
+    lang(aLang);
     switch (element.data('to')) {
       case 1:
-        COOKIE.html('Hello ' + document.cookie.split('; ').find(row => row
+        const HELLO = aLang === 'fr' ? 'Bonjour ' : 'Hello ';
+        COOKIE.html(HELLO + document.cookie.split('; ').find(row => row
           .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
           .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
           '.');
@@ -119,7 +129,7 @@ const getPage = element => {
       case 2:
         $('#question4').on('input', _ => $("#rangeNumber").text(document
           .getElementById('question4').value));
-        $('.radio1').on('click', function () {
+        $('.radio11, .radio12').on('click', function () {
           question5 = radio($(this));
         });
         break;
@@ -129,15 +139,22 @@ const getPage = element => {
         });
         break;
       case 4:
-        COOKIE.html('Thank you ' + document.cookie.split('; ').find(row => row
+        const THANK_YOU_0 = aLang === 'fr' ? 'Merci ' : 'Thank you ';
+        const THANK_YOU_1 = aLang === 'fr' ? ' pour avoir pris le temps de ré' +
+          'pondre à ce questionnaire. Sur la base de vos réponses, le restaur' +
+          'ant obtient la note de :' : ' for taking the time to answer this q' +
+          'uestionnaire. Based on your answers, the restaurant obtains the sc' +
+          'ore of:';
+        COOKIE.html(THANK_YOU_0 + document.cookie.split('; ').find(row => row
           .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
           .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
-          ' for taking the time to answer this questionnaire. Based on your a' +
-          'nswers, the restaurant obtains the score of:');
-        $('#submitButton').on('click', _ => {
-          if ( document.getElementById('question9').value !== '') {
+          THANK_YOU_1);
+        $('.submitButton').on('click', _ => {
+          if ( document.getElementById(aLang !== 'fr' ? 'question91' :
+            'question92').value !== '') {
             document.getElementById('required').style.display = 'none';
-            $('#comment').html('Thanks for leaving a comment.');
+            $('#comment').html(aLang === 'fr' ?'Merci d\'avoir laissé un comm' +
+              'entaire.' : 'Thanks for leaving a comment.');
           } else {
             document.getElementById('required').style.display = 'block';
           }
@@ -169,7 +186,9 @@ const getPage = element => {
                   {
                     scaleLabel: {
                       display: true,
-                      labelString: 'Attendance at restaurants each month',
+                      labelString: aLang === 'fr' ? 'Fréquentation des restau' +
+                        'rants chaque mois' : 'Attendance at restaurants each' +
+                        ' month',
                     }
                   }
                 ],
@@ -190,6 +209,6 @@ const getPage = element => {
       default:
         break;
     }
+    changePageButtons(element.data('to'));
   });
-  changePageButtons(element.data('to'));
 };
