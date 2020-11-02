@@ -84,8 +84,25 @@ $('.previous').on('click', function () {
   } else if ($(this).data('from') === 3) {
     question7 = 2;
   }
-  getPage($(this));
-  PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) - 1 + '/5');
+  anime({
+    targets: '#home',
+    'margin-left': '3840px',
+    easing: 'easeInOutBack',
+    complete: _ => {
+      getPage($(this));
+      PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) !== 5 ?
+        parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5' : '5/5');
+      document.getElementById('home').style.marginLeft= '0';
+      document.getElementById('home').style.marginRight= '3840px';
+      anime({
+        targets: '#home',
+        'margin-right': '0',
+        easing: 'easeInOutBack'
+      });
+      getPage($(this));
+      PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) - 1 + '/5');
+    }
+  });
 });
 
 const getPage = element => {
