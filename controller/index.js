@@ -1,8 +1,7 @@
-import { a } from '../model/a.js';
-import { changePageButtons } from '../model/change-page-buttons.js';
-import { csv } from '../model/csv.js';
-import { easeIn } from '../model/ease-in.js';
-import { radio } from '../model/radio.js';
+/* terser controller/*.js -o dist/controller.min.js -c -m */
+/* terser model/*.js -o dist/model.min.js -c -m */
+
+import { a, changePageButtons, csv, easeIn, radio } from '../dist/model.min.js';
 
 easeIn();
 $.get('view/questions-0.html', element => $('#page').html(element));
