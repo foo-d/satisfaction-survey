@@ -117,14 +117,15 @@ $('.previous').on('click', function () {
 const getPage = element => {
   $.get('view/questions-' + element.data('to') + '.html', page => {
     $('#page').html(page);
-    lang(aLang);
     switch (element.data('to')) {
       case 1:
-        const HELLO = aLang === 'fr' ? 'Bonjour ' : 'Hello ';
-        COOKIE.html(HELLO + document.cookie.split('; ').find(row => row
-          .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
-          .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
-          '.');
+        COOKIE.html('<span lang="en">Hello ' + document.cookie.split('; ')
+          .find(row => row.startsWith('firstName')).split('=')[1] + ' ' +
+          document.cookie.split('; ').find(row => row.startsWith('lastName'))
+            .split('=')[1] + '.</span><span lang="fr">Bonjour ' + document
+            .cookie.split('; ').find(row => row.startsWith('firstName'))
+            .split('=')[1] + ' ' + document.cookie.split('; ').find(row => row
+            .startsWith('lastName')).split('=')[1] + '.</span>');
         break;
       case 2:
         $('#question4').on('input', _ => $("#rangeNumber").text(document
@@ -139,25 +140,28 @@ const getPage = element => {
         });
         break;
       case 4:
-        const THANK_YOU_0 = aLang === 'fr' ? 'Merci ' : 'Thank you ';
-        const THANK_YOU_1 = aLang === 'fr' ? ' pour avoir pris le temps de ré' +
-          'pondre à ce questionnaire. Sur la base de vos réponses, le restaur' +
-          'ant obtient la note de :' : ' for taking the time to answer this q' +
-          'uestionnaire. Based on your answers, the restaurant obtains the sc' +
-          'ore of:';
-        COOKIE.html(THANK_YOU_0 + document.cookie.split('; ').find(row => row
-          .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
-          .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
-          THANK_YOU_1);
+        COOKIE.html('<span lang="en">Thank you ' + document.cookie.split('; ')
+          .find(row => row.startsWith('firstName')).split('=')[1] + ' ' +
+          document.cookie.split('; ').find(row => row.startsWith('lastName'))
+            .split('=')[1] + ' for taking the time to answer this questionnai' +
+          're. Based on your answers, the restaurant obtains the score of:</s' +
+          'pan><span lang="fr">Merci ' + document.cookie.split('; ')
+            .find(row => row.startsWith('firstName')).split('=')[1] + ' ' +
+          document.cookie.split('; ').find(row => row.startsWith('lastName'))
+            .split('=')[1] + ' pour avoir pris le temps de répondre à ce ques' +
+          'tionnaire. Sur la base de vos réponses, le restaurant obtient la n' +
+          'ote de :</span>');
         $('.submitButton').on('click', _ => {
           if ( document.getElementById(aLang !== 'fr' ? 'question91' :
             'question92').value !== '') {
             document.getElementById('required').style.display = 'none';
-            $('#comment').html(aLang === 'fr' ?'Merci d\'avoir laissé un comm' +
-              'entaire.' : 'Thanks for leaving a comment.');
+            $('#comment').html('<span lang="en">Thanks for leaving a comment.' +
+              '</span><span lang="fr">Merci d\'avoir laissé un commentaire.</' +
+              'span>');
           } else {
             document.getElementById('required').style.display = 'block';
           }
+          lang(aLang);
         });
         let score = 0;
         for (const PROPERTY in a) score += parseInt(a[PROPERTY]);
@@ -210,5 +214,6 @@ const getPage = element => {
         break;
     }
     changePageButtons(element.data('to'));
+    lang(aLang);
   });
 };
