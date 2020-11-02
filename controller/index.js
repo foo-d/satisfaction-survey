@@ -48,11 +48,6 @@ $('.next').on('click', function () {
     case 3:
       a.question7 = question7 * 10 / 3;
       a.question8 = document.getElementById('question8').checked ? 10 : 0;
-      COOKIE.html('Thank you ' + document.cookie.split('; ').find(row => row
-        .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
-        .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
-        ' for taking the time to answer this questionnaire. Based on your ans' +
-        'wers, the restaurant obtains the score of:');
       break;
     case 4:
       const ELEMENT = document.createElement('a');
@@ -116,6 +111,11 @@ const getPage = element => {
         });
         break;
       case 4:
+        COOKIE.html('Thank you ' + document.cookie.split('; ').find(row => row
+          .startsWith('firstName')).split('=')[1] + ' ' + document.cookie
+          .split('; ').find(row => row.startsWith('lastName')).split('=')[1] +
+          ' for taking the time to answer this questionnaire. Based on your a' +
+          'nswers, the restaurant obtains the score of:');
         $('#submitButton').on('click', _ => {
           if ( document.getElementById('question9').value !== '') {
             document.getElementById('required').style.display = 'none';
