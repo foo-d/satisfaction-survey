@@ -8,13 +8,13 @@
         <input id="lastNamefr" lang="fr" placeholder="Nom de famille" type="text">
         <input id="firstNameen" lang="en" placeholder="First name" type="text">
         <input id="firstNamefr" lang="fr" placeholder="Prénom" type="text">
-        <input id="ageen" lang="en" min="0" oninput="validity.valid || (value = '');" placeholder="Age" type="number">
-        <input id="agefr" lang="fr" min="0" oninput="validity.valid || (value = '');" placeholder="Âge" type="number">
+        <input id="ageen" lang="en" max="122" min="0" oninput="validity.valid || (value = '');" placeholder="Age" type="number">
+        <input id="agefr" lang="fr" max="122" min="0" oninput="validity.valid || (value = '');" placeholder="Âge" type="number">
         <input id="emailen" lang="en" placeholder="Email" type="email">
         <input id="emailfr" lang="fr" placeholder="Email" type="email">
         <input id="phoneNumberen" lang="en" min="0" oninput="validity.valid || (value = '');" placeholder="Phone number" type="number">
         <input id="phoneNumberfr" lang="fr" min="0" oninput="validity.valid || (value = '');" placeholder="Numéro de téléphone" type="number">
-        <input id="question0en" lang="en" min="0" oninput="validity.valid || (value = '');" placeholder="How often you have eaten out in the past month" type="number">
-        <input id="question0fr" lang="fr" min="0" oninput="validity.valid || (value = '');" placeholder="Combien de fois avez-vous mangé au restaurant le mois dernier" type="number">
+        <input id="question0en" lang="en" max="31" min="0" oninput="validity.valid || (value = '');" placeholder="How often you have eaten out in the past month" type="number">
+        <input id="question0fr" lang="fr" max="31" min="0" oninput="validity.valid || (value = '');" placeholder="Combien de fois avez-vous mangé au restaurant le mois dernier" type="number">
     </label>
 </div>

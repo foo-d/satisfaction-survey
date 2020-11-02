@@ -1,8 +1,8 @@
 /* terser controller/*.js -o dist/controller.min.js -c -m */
 /* terser model/*.js -o dist/model.min.js -c -m */
 
-import { a, changePageButtons, csv, easeIn, lang, radio } from
-  '../dist/model.min.js';
+import { a, changePageButtons, csv, displayRequired, easeIn, lang, radio } from
+    '../dist/model.min.js';
 
 let aLang = lang(navigator.language.substring(0, 2));
 $.get('view/questions-0.html', element => {
@@ -16,6 +16,8 @@ $('#lang').on('click', _ => {
   if (aLang === 'fr') aLang = lang('en'); else aLang = lang('fr');
 });
 let required = true;
+let requiredEmail = true;
+let requiredPhoneNumber = true;
 const COOKIE = $('#cookie');
 let question5 = 2;
 let question7 = 2;
@@ -32,13 +34,21 @@ $('.next').on('click', function () {
           required = false;
         }
       }
-      if (required) {
+      const REG_EXP_EMAIL = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+      requiredEmail = REG_EXP_EMAIL.test(document.getElementById('email' +
+        aLang).value);
+      const REG_EXP_PHONE_NUMBER =
+        /^[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4}$/;
+      requiredPhoneNumber = REG_EXP_PHONE_NUMBER.test(document
+        .getElementById('phoneNumber' + aLang).value);
+      if (required && requiredEmail && requiredPhoneNumber) {
         document.cookie = 'lastName=' + document.getElementById('lastName' +
           aLang).value + ';';
         document.cookie = 'firstName=' + document.getElementById('firstName' +
           aLang).value + ';';
         document.cookie = 'question0=' + document.getElementById('question0' +
           aLang).value + ';';
+        a.question3 = 10;
       }
       break;
     case 1:
@@ -46,7 +56,8 @@ $('.next').on('click', function () {
         document.getElementById('question12' + aLang).value * 10 / 8;
       a.question2 = document.querySelector('input[name="question2"]:checked')
         .value * 10 / 4;
-      a.question3 = document.getElementById('question3').value === '' ? 10 : 0;
+      a.question3 = document.getElementById('question3' + aLang).value === '' ?
+        0 : 10;
       break;
     case 2:
       a.question4 = document.getElementById('question4').value;
@@ -69,8 +80,8 @@ $('.next').on('click', function () {
     default:
       break;
   }
-  if (required) {
-    document.getElementById('required').style.display = 'none';
+  if (required && requiredEmail && requiredPhoneNumber && a.question3 === 10) {
+    displayRequired();
     if (parseInt(PAGE_NUMBER.text().charAt(0)) !== 5) {
       anime({
         targets: '#home',
@@ -83,24 +94,23 @@ $('.next').on('click', function () {
         }
       });
     }
+  } else if (!required) {
+    displayRequired('required');
+  } else if (!requiredEmail) {
+    displayRequired('requiredEmail');
   } else {
-    document.getElementById('required').style.display = 'block';
+    !requiredPhoneNumber ? displayRequired('requiredPhoneNumber') : document
+      .getElementById('required').style.display = 'block';
   }
 });
 $('.previous').on('click', function () {
-  if ($(this).data('from') === 2) {
-    question5 = 2;
-  } else if ($(this).data('from') === 3) {
-    question7 = 2;
-  }
   anime({
     targets: '#home',
     'margin-left': '3840px',
     easing: 'easeInOutBack',
     complete: _ => {
       getPage($(this));
-      PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) !== 5 ?
-        parseInt(PAGE_NUMBER.text().charAt(0)) + 1 + '/5' : '5/5');
+      PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) - 1 + '/5');
       document.getElementById('home').style.marginLeft= '0';
       document.getElementById('home').style.marginRight= '3840px';
       anime({
@@ -108,10 +118,13 @@ $('.previous').on('click', function () {
         'margin-right': '0',
         easing: 'easeInOutBack'
       });
-      getPage($(this));
-      PAGE_NUMBER.text(parseInt(PAGE_NUMBER.text().charAt(0)) - 1 + '/5');
     }
   });
+  if ($(this).data('from') === 2) {
+    question5 = 2;
+  } else if ($(this).data('from') === 3) {
+    question7 = 2;
+  }
 });
 
 const getPage = element => {

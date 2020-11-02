@@ -76,14 +76,14 @@
     display: flex;
 }
 
-/*********************//* #social a *//* #social *//* #title *//* #foreground */
+/**********************************//* #social a *//* #title *//* #foreground */
 #social a {
     border-radius: 99px;
     height: 50px;
     margin: 15px;
 }
 
-/*******************//* #social img *//* #social *//* #title *//* #foreground */
+/********************************//* #social img *//* #title *//* #foreground */
 #social img {
     filter: grayscale(25%);
     height: 50px;
@@ -172,7 +172,7 @@
     width: 100%;
 }
 
-/**********************//* #page > div *//* #page *//* #home *//* #foreground */
+/*********************************//* #page > div *//* #home *//* #foreground */
 #page > div {
     margin: 0 0 15px 0;
     width: 50%;
@@ -215,7 +215,7 @@
     width: 50px;
 }
 
-/*********//* #question52, #question72 *//* #page *//* #home *//* #foreground */
+/**********//* #question52-#question72 *//* #page *//* #home *//* #foreground */
 #question521, #question522, #question72 {
     border-color: #000000;
 }
@@ -239,8 +239,8 @@
     box-shadow: inset 0 0 5px #606060;
 }
 
-/***********************************//* #required *//* #home *//* #foreground */
-#required {
+/** #required-#requiredEmail-#requiredPhoneNumber *//* #home *//* #foreground */
+#required, #requiredEmail, #requiredPhoneNumber {
     color: #ff0000;
     display: none;
 }
