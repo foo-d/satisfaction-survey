@@ -102,14 +102,19 @@ Les couleurs qui vont être utilisées pour l'application web sont :
 C'est à la fois la couleur du texte du nom de l'entreprise mais aussi celle d'arrière-plan du questionnaire de satisfaction.
 ##### Gris
 
-![color1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/color2.png)
+![color2](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/color2.png)
 
 Cette couleur va servir à donner du relief notamment sur les boutons du site internet grâce à des ombres.
 ##### Noir
 
-![color1](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/color3.png)
+![color3](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/color3.png)
 
 Tous les textes du site internet sont de cette couleur.
+##### Dégradé de rouge pâle à vert pâle 
+
+![chart](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/chart.png)
+
+Ce dégradé sera utilisé pour le repère de représentation graphique qui va s'afficher à la fin de l'enquête de satisfaction.
 #### Photographies
 Les photos pouvant être utilisées sont celles du restaurant comme :
 
