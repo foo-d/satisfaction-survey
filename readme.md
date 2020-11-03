@@ -178,6 +178,10 @@ Le site internet devra être hébergé pour garantir son accessibilité permanen
 Il faudra également assurer sa maintenance.
 ### Les livrables
 ### Le planning
+#### Diagramme de Gantt
+
+![ganntt](https://raw.githubusercontent.com/foo-d/satisfaction-survey/master/img/gantt.png)
+
 * Date de la création et validation des maquettes : du 21/10/2020 au 23/10/2020
 * Date de la création et validation des contenus : du 26/102020 au 28/10/2020
 * Date de la création et validation du site : du 02/11/2020 au 09/11/2020
