@@ -148,7 +148,6 @@
 
 /************************************//* #langImg *//* #home *//* #foreground */
 #langImg {
-    border: #000000 1px solid;
     filter: grayscale(25%);
     height: 24px;
     transition: .15s;

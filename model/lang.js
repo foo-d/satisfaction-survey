@@ -4,13 +4,13 @@ export const lang = (aLang = '') => {
     $('html').attr('lang', 'fr');
     $('[lang="en"]').hide();
     $('[lang="fr"]').show();
-    $('#langImg').attr('src', 'img/1920px-Flag_of_the_United_Kingdom.svg.png');
+    $('#langImg').attr('src', 'img/flag2.png');
     return 'fr';
   } else {
     $('html').attr('lang', 'en');
     $('[lang="fr"]').hide();
     $('[lang="en"]').show();
-    $('#langImg').attr('src', 'img/1920px-Flag_of_France.svg.png');
+    $('#langImg').attr('src', 'img/flag1.png');
     return 'en';
   }
 };
