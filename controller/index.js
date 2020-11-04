@@ -34,7 +34,8 @@ $('.next').on('click', function () {
           required = false;
         }
       }
-      const REG_EXP_EMAIL = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+      const REG_EXP_EMAIL =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
       requiredEmail = REG_EXP_EMAIL.test(document.getElementById('email' +
         aLang).value);
       const REG_EXP_PHONE_NUMBER =
